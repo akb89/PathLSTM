@@ -11,5 +11,5 @@ JAVA=java
 
 # ID FORM LEMMA PLEMMA POS PPOS FEAT PFEAT HEAD PHEAD DEPREL PDEPREL FILLPRED PRED APREDs
 # note: the file to be parsed, $1, needs to be a syntactically preprocessed input file in the CoNLL-2009 format 
-$JAVA -Xmx60g -cp pathlstm.jar se.lth.cs.srl.Parse fnet $1 $SRL_MODEL $RERANKER -framenet $FN_DATA -printXML out.xml
+$JAVA -Xmx60g -Dfile.encoding=UTF-8 -cp target/classes/ se.lth.cs.srl.Parse fnet $1 $SRL_MODEL $RERANKER -framenet $FN_DATA -printXML out.xml
 # note: make sure that the compiled class files (run "mvn compile") are located in target/classes/ or adjust class path to include precompiled .jar
