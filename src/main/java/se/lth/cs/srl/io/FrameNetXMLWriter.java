@@ -55,12 +55,10 @@ public class FrameNetXMLWriter implements SentenceWriter {
 		for (int i = 1; i < s.size(); i++) {
 			if (i > 1)
 				text.append(' ');
-
 			s.get(i).setBegin(text.length());
 			text.append(s.get(i).getForm());
 			s.get(i).setEnd(text.length());
 		}
-
 		int annID = count * 100;
 
 		try {
@@ -149,7 +147,7 @@ public class FrameNetXMLWriter implements SentenceWriter {
 			count++;
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Failed to write sentance.");
+			System.out.println("Failed to write sentence.");
 			System.exit(1);
 		}
 	}

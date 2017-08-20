@@ -22,8 +22,8 @@ public class DepsOnlyCoNLL09Reader extends AbstractCoNLL09Reader {
 			} else {
 				sen = Sentence.newDepsOnlySentence(NEWLINE_PATTERN
 						.split(senBuffer.toString()));
-				// System.err.println("Processing sentence ...");
-				// System.err.println(sen);
+				//System.err.println("Processing sentence ...");
+				//System.err.println(sen);
 				break;
 			}
 		}
